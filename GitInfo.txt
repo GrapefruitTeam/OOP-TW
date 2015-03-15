@@ -1,0 +1,8 @@
+Данни за Гит:
+Git: GrapefruitTeam
+repo: OOP HW
+
+Git e-mail:
+user: teamgrapefruit@gmail.com
+pass: TeamGrapefruit12354
+
