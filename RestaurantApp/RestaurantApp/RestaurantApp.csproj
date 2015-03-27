@@ -49,6 +49,11 @@
     <Compile Include="Employee.cs" />
     <Compile Include="Guard.cs" />
     <Compile Include="Hostess.cs" />
+    <Compile Include="ICancelOrder.cs" />
+    <Compile Include="ICancelReservation.cs" />
+    <Compile Include="ICheckable.cs" />
+    <Compile Include="IOrder.cs" />
+    <Compile Include="IReserve.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Order.cs" />
