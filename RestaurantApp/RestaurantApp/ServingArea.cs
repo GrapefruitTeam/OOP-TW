@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp
 {
-    public class ServingArea
+    public abstract class ServingArea
     {
-        
+        public IList<Table> Tables { get; set; }
     }
 }

@@ -8,5 +8,6 @@ namespace RestaurantApp
 {
     public class Check
     {
+        public CheckPaymentMethod PaymentMethod { get; set; }
     }
 }

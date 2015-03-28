@@ -8,6 +8,6 @@ namespace RestaurantApp
 {
     public class Client : Person
     {
-        //special or regular
+        public ClientType ClientType { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace RestaurantApp
 {
     public class Table : ServingArea
     {
-        
+        public TableStatus TableStatus { get; set; }
     }
 }

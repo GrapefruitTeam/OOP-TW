@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp
 {
-    public class Person
+    public abstract class Person
     {
+        public int Name { get; set; }
     }
 }
