@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp
 {
-    public class Waiter : Employee
+    public class Waiter : Employee, IOrder, ICancelOrder
     {
         
     }
