@@ -9,11 +9,12 @@ namespace RestaurantApp
     public static class ServingArea
     {
         private const int numberOfTables = 8;
+
         private static List<Table> tables;
 
         static ServingArea()
         {
-            tables = new List<Table>(8);
+            tables = new List<Table>(numberOfTables);
             for (int i = 0; i < numberOfTables; i++)
             {
                 tables.Add(new Table());
