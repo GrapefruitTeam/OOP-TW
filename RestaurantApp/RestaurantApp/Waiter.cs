@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp
 {
-    public class Waiter : Employee, IOrder, ICancelOrder
+    public class Waiter : AuthorizedEmployee, IOrder, ICancelOrder
     {
-        
+        public Waiter(string name, string employeeId, string password)
+            : base(name, employeeId, password)
+        {
+        }
     }
 }

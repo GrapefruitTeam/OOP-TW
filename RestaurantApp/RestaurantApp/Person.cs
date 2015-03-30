@@ -8,6 +8,15 @@ namespace RestaurantApp
 {
     public abstract class Person
     {
-        public int Name { get; set; }
+        public Person(string name)
+        {
+            this.Name = name;
+        }
+
+        public Person()
+        {
+        }
+        
+        public string Name { get; set; }
     }
 }

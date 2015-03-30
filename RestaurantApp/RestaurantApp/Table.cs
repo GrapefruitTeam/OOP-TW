@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp
 {
-    public class Table : ServingArea
+    public class Table
     {
+        public Table()
+        {
+            this.TableStatus = TableStatus.Free;
+        }
+
         public TableStatus TableStatus { get; set; }
     }
 }

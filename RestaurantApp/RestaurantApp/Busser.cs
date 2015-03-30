@@ -8,5 +8,9 @@ namespace RestaurantApp
 {
     public class Busser : Employee
     {
+        public Busser(string name, int employeeId)
+            : base(name, employeeId)
+        {
+        }
     }
 }

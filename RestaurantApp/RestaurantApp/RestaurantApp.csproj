@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorizedEmployee.cs" />
     <Compile Include="Busser.cs" />
     <Compile Include="Check.cs" />
     <Compile Include="CheckPaymentMethod.cs" />
