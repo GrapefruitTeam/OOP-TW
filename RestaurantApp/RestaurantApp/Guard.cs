@@ -8,7 +8,7 @@ namespace RestaurantApp
 {
     public class Guard : Employee
     {
-        public Guard(string name, int employeeId)
+        public Guard(string name, string employeeId)
             : base(name, employeeId)
         {
         }
