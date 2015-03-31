@@ -60,7 +60,7 @@
   <Class Name="RestaurantApp.Hostess" Collapsed="true">
     <Position X="8.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Hostess.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -68,7 +68,7 @@
   <Class Name="RestaurantApp.Manager" Collapsed="true">
     <Position X="6.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -76,14 +76,14 @@
   <Class Name="RestaurantApp.Menu" Collapsed="true">
     <Position X="6.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAAAAgAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAAAAgBEAA=</HashCode>
       <FileName>Menu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Order" Collapsed="true">
     <Position X="8.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Order.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -104,14 +104,14 @@
   <Class Name="RestaurantApp.Table" Collapsed="true">
     <Position X="12" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Table.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Waiter" Collapsed="true">
     <Position X="10" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Waiter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

@@ -17,5 +17,10 @@ namespace RestaurantApp
         }
 
         public TableStatus TableStatus { get; set; }
+
+        public static void Order(Table thisTable)
+        {
+
+        }
     }
 }
