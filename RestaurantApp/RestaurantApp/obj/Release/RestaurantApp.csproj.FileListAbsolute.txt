@@ -1,0 +1,6 @@
+C:\Users\Vili\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\bin\Release\KruchmaApp.exe.config
+C:\Users\Vili\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\bin\Release\KruchmaApp.exe
+C:\Users\Vili\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\bin\Release\KruchmaApp.pdb
+C:\Users\Vili\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\obj\Release\RestaurantApp.csprojResolveAssemblyReference.cache
+C:\Users\Vili\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\obj\Release\KruchmaApp.exe
+C:\Users\Vili\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\obj\Release\KruchmaApp.pdb

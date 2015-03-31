@@ -35,5 +35,14 @@ namespace RestaurantApp
             { "Soft drink", 1.8 },
             { "Coffee", 1.6 }
         };
+
+        public static void ShowMenu(Dictionary<string, double> menu)
+        {
+            foreach (var x in menu )
+            {
+                Console.WriteLine("{0}", x);
+            }
+            Console.WriteLine();
+        }
     }
 }

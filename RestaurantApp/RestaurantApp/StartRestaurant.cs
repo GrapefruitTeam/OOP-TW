@@ -15,6 +15,13 @@ namespace RestaurantApp
             {
                 Console.WriteLine(item.TableStatus);
             }
+            Console.WriteLine();
+            Menu.ShowMenu(Menu.appetizers);
+            Menu.ShowMenu(Menu.mainDish);
+            Menu.ShowMenu(Menu.desserts);
+            Menu.ShowMenu(Menu.drinks);
+            
+
         }
     }
 }

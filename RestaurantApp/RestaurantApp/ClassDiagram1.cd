@@ -76,7 +76,7 @@
   <Class Name="RestaurantApp.Menu" Collapsed="true">
     <Position X="6.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAAAAgAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAAAAgBEAA=</HashCode>
       <FileName>Menu.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -97,14 +97,14 @@
   <Class Name="RestaurantApp.ServingArea" Collapsed="true">
     <Position X="12" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABBAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ServingArea.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Table" Collapsed="true">
     <Position X="12" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Table.cs</FileName>
     </TypeIdentifier>
   </Class>
