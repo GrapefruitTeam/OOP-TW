@@ -36,5 +36,10 @@ namespace RestaurantApp
                 table.TableStatus = TableStatus.Free;
             }
         }
+
+        public void AddMenuItemToOrder(Table table, string item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

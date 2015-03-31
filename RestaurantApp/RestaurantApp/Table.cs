@@ -8,9 +8,12 @@ namespace RestaurantApp
 {
     public class Table
     {
+        public Order TableOrder { get; set; }
+
         public Table()
         {
             this.TableStatus = TableStatus.Free;
+            this.TableOrder = new Order();
         }
 
         public TableStatus TableStatus { get; set; }

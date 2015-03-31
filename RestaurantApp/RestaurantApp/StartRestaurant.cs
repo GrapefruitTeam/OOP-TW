@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RestaurantApp
 {
@@ -26,6 +27,15 @@ namespace RestaurantApp
             Console.WriteLine(ServingArea.Tables[2].TableStatus);
             Console.WriteLine(ServingArea.Tables[1].TableStatus);
             Console.WriteLine(ServingArea.Tables[5].TableStatus);
+            Console.WriteLine();
+
+            //Testing Waiter
+            Waiter waiter = new Waiter("Todor", "56789", "password");
+            Table table = new Table();
+            waiter.AddMenuItemToOrder(table, "Beer");
+            waiter.AddMenuItemToOrder(table, "Soft drink");
+            waiter.AddMenuItemToOrder(table, "French Fries");
+            waiter.PrintCheck(table);
         }
     }
 }

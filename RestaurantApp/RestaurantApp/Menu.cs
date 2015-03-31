@@ -8,29 +8,17 @@ namespace RestaurantApp
 {
     public static class Menu
     {
-        public static Dictionary<string, double> appetizers = new Dictionary<string, double>()
+        public static Dictionary<string, double> MenuList = new Dictionary<string, double>()
         {
-            { "Stuffed Mushrooms", 5.2 },
+            { "Stuffed Mushrooms", 5.2},
             { "Fried Calamari", 5.5 },
-            { "French Fries", 3.4 }
-        };
-
-        public static Dictionary<string, double> mainDish = new Dictionary<string, double>()
-        {
+            { "French Fries", 3.4},
             { "Bourbon Chicken", 8.4 },
             { "Crock-Pot Chicken With Black Beans & Cream Cheese", 9.4 },
-            { "Creamy Cajun Chicken Pasta", 8.6 }
-        };
-
-        public static Dictionary<string, double> desserts = new Dictionary<string, double>()
-        {
+            { "Creamy Cajun Chicken Pasta", 8.6 },
             { "Strawberry-Coconut Pie", 6.5 },
             { "White Chocolate & Strawberry Layer Cake", 7.5 },
-            { "Milk Chocolate Cream Pie", 7 }
-        };
-
-        public static Dictionary<string, double> drinks = new Dictionary<string, double>()
-        {
+            { "Milk Chocolate Cream Pie", 7 },
             { "Beer", 2 },
             { "Soft drink", 1.8 },
             { "Coffee", 1.6 }
