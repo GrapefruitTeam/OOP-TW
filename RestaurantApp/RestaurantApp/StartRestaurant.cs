@@ -15,6 +15,7 @@ namespace RestaurantApp
             {
                 Console.WriteLine(item.TableStatus);
             }
+<<<<<<< HEAD
             Console.WriteLine();
             Menu.ShowMenu(Menu.appetizers);
             Menu.ShowMenu(Menu.mainDish);
@@ -22,6 +23,19 @@ namespace RestaurantApp
             Menu.ShowMenu(Menu.drinks);
             
 
+=======
+
+            //Testing Hostess
+            Hostess hostess = new Hostess("Penka", "12345", "password");
+            hostess.ReserveTable(ServingArea.Tables[2]);
+            hostess.ReserveTable(ServingArea.Tables[1]);
+            hostess.CancelReservation(ServingArea.Tables[5]);
+            
+            Console.WriteLine();
+            Console.WriteLine(ServingArea.Tables[2].TableStatus);
+            Console.WriteLine(ServingArea.Tables[1].TableStatus);
+            Console.WriteLine(ServingArea.Tables[5].TableStatus);
+>>>>>>> origin/master
         }
     }
 }
