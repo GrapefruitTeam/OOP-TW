@@ -40,7 +40,7 @@ namespace RestaurantApp
                 {
                     string[] data = line.Split(';');
                     menuItems[index].Name = data[0];
-                    menuItems[index].Price = double.Parse(data[1].Replace(',', '.'));
+                    menuItems[index].Price = double.Parse(data[1]);
 
                     index++;
                     line = reader.ReadLine();
