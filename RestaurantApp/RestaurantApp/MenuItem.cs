@@ -23,17 +23,7 @@ namespace RestaurantApp
 
         public MenuItem[] InitializeMenu()
         {
-            int count = 0;
-            using (StreamReader reader = new StreamReader(@"..\..\Menu.txt"))
-            {
-                string line = reader.ReadLine();
-                while (line != null)
-                {
-                    count++;
-                    line = reader.ReadLine();
-                }
-            }
-            
+            int count = File.ReadLines(@"..\..\Menu.txt").Count();
             MenuItem[] menuItems = new MenuItem[count];
 
             for (var i = 0; i < menuItems.Length; i++)
@@ -48,10 +38,10 @@ namespace RestaurantApp
 
                 while (line != null)
                 {
-                    string[] data = new string[2];
-                    data = line.Split(' ').ToArray();
+                    string[] data = line.Split(';');
                     menuItems[index].Name = data[0];
-                    menuItems[index].Price = double.Parse(data[1]);
+                    menuItems[index].Price = double.Parse(data[1].Replace(',', '.'));
+
                     index++;
                     line = reader.ReadLine();
                 }

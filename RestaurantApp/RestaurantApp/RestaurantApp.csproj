@@ -58,7 +58,7 @@
     <Compile Include="IOrder.cs" />
     <Compile Include="IReserve.cs" />
     <Compile Include="Manager.cs" />
-    <Compile Include="Menu.cs" />
+    <Compile Include="MenuItem.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
