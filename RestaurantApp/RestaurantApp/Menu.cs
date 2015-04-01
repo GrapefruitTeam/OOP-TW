@@ -10,25 +10,25 @@ namespace RestaurantApp
     {
         public static Dictionary<string, double> MenuList = new Dictionary<string, double>()
         {
-            { "Stuffed Mushrooms", 5.2},
-            { "Fried Calamari", 5.5 },
-            { "French Fries", 3.4},
-            { "Bourbon Chicken", 8.4 },
-            { "Crock-Pot Chicken With Black Beans & Cream Cheese", 9.4 },
-            { "Creamy Cajun Chicken Pasta", 8.6 },
-            { "Strawberry-Coconut Pie", 6.5 },
-            { "White Chocolate & Strawberry Layer Cake", 7.5 },
-            { "Milk Chocolate Cream Pie", 7 },
-            { "Beer", 2 },
-            { "Soft drink", 1.8 },
-            { "Coffee", 1.6 }
+            { "1 .Stuffed Mushrooms", 5.2},
+            { "2. Fried Calamari", 5.5 },
+            { "3. French Fries", 3.4},
+            { "4. Bourbon Chicken", 8.4 },
+            { "5. Crock-Pot Chicken with Cream Cheese", 9.4 },
+            { "6. Creamy Cajun Chicken Pasta", 8.6 },
+            { "7. Strawberry-Coconut Pie", 6.5 },
+            { "8. White Chocolate & Strawberry Cake", 7.5 },
+            { "9. Milk Chocolate Cream Pie", 7 },
+            { "10. Beer", 2 },
+            { "11. Soft drink", 1.8 },
+            { "12. Coffee", 1.6 }
         };
 
-        public static void ShowMenu(Dictionary<string, double> menu)
+        public static void ShowMenu()
         {
-            foreach (var x in menu )
+            foreach (var item in Menu.MenuList)
             {
-                Console.WriteLine("{0}", x);
+                Console.WriteLine("{0} - {1:C}", item.Key, item.Value);
             }
             Console.WriteLine();
         }
