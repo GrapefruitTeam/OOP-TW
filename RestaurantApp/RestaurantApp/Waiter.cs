@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RestaurantApp
+﻿namespace RestaurantApp
 {
+    using System;
+
     public class Waiter : AuthorizedEmployee, IOrder, ICancelOrder, ICheckable
     {
         public Waiter(string name, string employeeId, string password)
@@ -27,6 +23,7 @@ namespace RestaurantApp
                 Console.WriteLine("{0,-20} {1:C}", item.Name, item.Price);
                 sum += (decimal)item.Price;
             }
+
             Console.WriteLine("Total price: {0,16:C}", sum);
         }
     }
