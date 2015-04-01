@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,6 +10,8 @@ namespace RestaurantApp
     {
         static void Main()
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+
             // Testing ServingArea.cs
             //ServingArea.Tables[2].TableStatus = TableStatus.Occupied;
             //ServingArea.Tables[5].TableStatus = TableStatus.Reserved;
