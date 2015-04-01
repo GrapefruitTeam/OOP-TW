@@ -1,0 +1,12 @@
+StuffedMushrooms 5,2
+FriedCalamari 5,5
+FrenchFries 3,4
+BourbonChicken 8,4
+Crock-PotChickenWithBlackBeans 9,4
+CreamyCajunChickenPasta 8,6
+Strawberry-CoconutPie 6,5
+WhiteChocolate&StrawberryLayerCake 7,5
+MilkChocolateCreamPie 7
+Beer 2
+Softdrink 1,8
+Coffee 1,6

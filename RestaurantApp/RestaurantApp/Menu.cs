@@ -3,34 +3,60 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace RestaurantApp
 {
-    public static class Menu
+    public class MenuItem
     {
-        public static Dictionary<string, double> MenuList = new Dictionary<string, double>()
-        {
-            { "1 .Stuffed Mushrooms", 5.2},
-            { "2. Fried Calamari", 5.5 },
-            { "3. French Fries", 3.4},
-            { "4. Bourbon Chicken", 8.4 },
-            { "5. Crock-Pot Chicken with Cream Cheese", 9.4 },
-            { "6. Creamy Cajun Chicken Pasta", 8.6 },
-            { "7. Strawberry-Coconut Pie", 6.5 },
-            { "8. White Chocolate & Strawberry Cake", 7.5 },
-            { "9. Milk Chocolate Cream Pie", 7 },
-            { "10. Beer", 2 },
-            { "11. Soft drink", 1.8 },
-            { "12. Coffee", 1.6 }
-        };
+        private string name;
+        private double price;
 
-        public static void ShowMenu()
+        public string Name { get { return this.name; } set { this.name = value; } }
+        public double Price { get { return this.price; } set { this.price = value; } }
+
+        public MenuItem()
         {
-            foreach (var item in Menu.MenuList)
+            this.Name = name;
+            this.Price = price;
+        }
+
+        public MenuItem[] InitializeMenu()
+        {
+            int count = 0;
+            using (StreamReader reader = new StreamReader(@"..\..\Menu.txt"))
             {
-                Console.WriteLine("{0} - {1:C}", item.Key, item.Value);
+                string line = reader.ReadLine();
+                while (line != null)
+                {
+                    count++;
+                    line = reader.ReadLine();
+                }
             }
-            Console.WriteLine();
+            
+            MenuItem[] menuItems = new MenuItem[count];
+
+            for (var i = 0; i < menuItems.Length; i++)
+            {
+                menuItems[i] = new MenuItem();
+            }
+
+            int index = 0;
+            using (StreamReader reader = new StreamReader(@"..\..\Menu.txt"))
+            {
+                string line = reader.ReadLine();
+
+                while (line != null)
+                {
+                    string[] data = new string[2];
+                    data = line.Split(' ').ToArray();
+                    menuItems[index].Name = data[0];
+                    menuItems[index].Price = double.Parse(data[1]);
+                    index++;
+                    line = reader.ReadLine();
+                }
+            }
+            return menuItems;
         }
     }
 }

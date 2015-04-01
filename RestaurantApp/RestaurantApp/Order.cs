@@ -8,28 +8,22 @@ namespace RestaurantApp
 {
     public class Order
     {
-        private ICollection<string> orderList;
+        private ICollection<MenuItem> orderList;
 
         public Order()
         {
-            this.orderList = new List<string>();
+            this.orderList = new List<MenuItem>();
         }
 
-        public ICollection<string> OrderList
+        public ICollection<MenuItem> OrderList
         {
-            get { return new List<string>(orderList); }
+            get { return new List<MenuItem>(orderList); }
             set { orderList = value; }
         }
 
-        public void AddOrder(int menuItemNumber)
+        public void AddItem(MenuItem item)
         {
-            if (menuItemNumber - 1 < 0 || menuItemNumber - 1 > Menu.MenuList.Count)
-            {
-                throw new ArgumentOutOfRangeException("Menu item doesn't exist");
-            }
-
-            string menuItem = Menu.MenuList.Keys.ElementAt(menuItemNumber - 1);
-            this.orderList.Add(menuItem);
+            this.orderList.Add(item);
         }
     }
 }

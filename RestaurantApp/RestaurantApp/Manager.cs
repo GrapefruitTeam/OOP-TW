@@ -37,9 +37,9 @@ namespace RestaurantApp
             }
         }
 
-        public void AddMenuItemToOrder(Table table, int menuItemNumber)
+        public void AddMenuItemToOrder(Table table, MenuItem item)
         {
-            table.Order.AddOrder(menuItemNumber);
+            table.Order.AddItem(item);
         }
     }
 }
