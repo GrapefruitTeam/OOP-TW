@@ -37,5 +37,15 @@
         {
             table.Order.AddItem(item);
         }
+
+        public void RemoveItemFromOrder(Table table, MenuItem item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CancelOrder(Table table)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

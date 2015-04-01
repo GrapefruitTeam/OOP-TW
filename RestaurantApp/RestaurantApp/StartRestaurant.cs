@@ -39,6 +39,9 @@ namespace RestaurantApp
             waiter.AddMenuItemToOrder(table, menuList[2]);
             waiter.AddMenuItemToOrder(table, menuList[1]);
             waiter.AddMenuItemToOrder(table, menuList[0]);
+            waiter.RemoveItemFromOrder(table, menuList[0]);
+            waiter.PrintCheck(table);
+            waiter.CancelOrder(table);
             waiter.PrintCheck(table);
         }
     }

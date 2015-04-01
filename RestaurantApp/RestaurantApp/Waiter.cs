@@ -26,5 +26,15 @@
 
             Console.WriteLine("Total price: {0,16:C}", sum);
         }
+
+        public void RemoveItemFromOrder(Table table, MenuItem item)
+        {
+            table.Order.RemoveItem(item);
+        }
+
+        public void CancelOrder(Table table)
+        {
+            table.Order.RemoveOrder();
+        }
     }
 }

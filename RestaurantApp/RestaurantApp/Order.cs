@@ -25,5 +25,15 @@ namespace RestaurantApp
         {
             this.orderList.Add(item);
         }
+
+        public void RemoveItem(MenuItem item)
+        {
+            this.orderList.Remove(item);
+        }
+
+        public void RemoveOrder()
+        {
+            this.orderList.Clear();
+        }
     }
 }
