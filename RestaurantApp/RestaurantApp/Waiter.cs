@@ -13,17 +13,16 @@ namespace RestaurantApp
         {
         }
 
-        public void AddMenuItemToOrder(Table table, string item)
+        public void AddMenuItemToOrder(Table table, int menuItemNumber)
         {
-            table.TableOrder.OrderList.Add(Menu.MenuList.Keys.Where(x => x == item)
-                .Select(x => x).ToArray()[0]);
+            table.Order.AddOrder(menuItemNumber);
         }
 
         public void PrintCheck(Table table)
         {
             decimal sum = 0;
-            Console.WriteLine("CHECK");
-            foreach (var item in table.TableOrder.OrderList)
+            Console.WriteLine("CHECK:");
+            foreach (var item in table.Order.OrderList)
             {
                 Console.WriteLine("{0,-20} {1:C}", item, Menu.MenuList[item]);
                 sum += (decimal)Menu.MenuList[item];

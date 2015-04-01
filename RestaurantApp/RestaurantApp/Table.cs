@@ -8,19 +8,14 @@ namespace RestaurantApp
 {
     public class Table
     {
-        public Order TableOrder { get; set; }
-
         public Table()
         {
             this.TableStatus = TableStatus.Free;
-            this.TableOrder = new Order();
+            this.Order = new Order();
         }
 
         public TableStatus TableStatus { get; set; }
 
-        public static void Order(Table thisTable)
-        {
-
-        }
+        public Order Order { get; set; }
     }
 }

@@ -18,10 +18,6 @@ namespace RestaurantApp
             }
 
             Console.WriteLine();
-            //Menu.ShowMenu(Menu.appetizers);
-            //Menu.ShowMenu(Menu.mainDish);
-            //Menu.ShowMenu(Menu.desserts);
-            //Menu.ShowMenu(Menu.drinks);
 
             //Testing Hostess
             Hostess hostess = new Hostess("Penka", "12345", "password");
@@ -38,9 +34,10 @@ namespace RestaurantApp
             //Testing Waiter
             Waiter waiter = new Waiter("Todor", "56789", "password");
             Table table = new Table();
-            waiter.AddMenuItemToOrder(table, "Beer");
-            waiter.AddMenuItemToOrder(table, "Soft drink");
-            waiter.AddMenuItemToOrder(table, "French Fries");
+            waiter.AddMenuItemToOrder(table, 1);
+            waiter.AddMenuItemToOrder(table, 2);
+            waiter.AddMenuItemToOrder(table, 6);
+            waiter.AddMenuItemToOrder(table, 12);
             waiter.PrintCheck(table);
         }
     }
