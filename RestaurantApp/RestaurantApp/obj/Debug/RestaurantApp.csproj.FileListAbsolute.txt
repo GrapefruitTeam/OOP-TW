@@ -1,6 +1,0 @@
-C:\Users\Georgi Kermekchiev\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\bin\Debug\KruchmaApp.exe.config
-C:\Users\Georgi Kermekchiev\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\bin\Debug\KruchmaApp.exe
-C:\Users\Georgi Kermekchiev\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\bin\Debug\KruchmaApp.pdb
-C:\Users\Georgi Kermekchiev\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\obj\Debug\RestaurantApp.csprojResolveAssemblyReference.cache
-C:\Users\Georgi Kermekchiev\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\obj\Debug\KruchmaApp.exe
-C:\Users\Georgi Kermekchiev\Documents\GitHub\OOP-TW\RestaurantApp\RestaurantApp\obj\Debug\KruchmaApp.pdb
