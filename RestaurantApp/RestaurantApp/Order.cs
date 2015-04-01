@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RestaurantApp
+﻿namespace RestaurantApp
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class Order
     {
         private ICollection<string> orderList;
@@ -17,8 +15,8 @@ namespace RestaurantApp
 
         public ICollection<string> OrderList
         {
-            get { return new List<string>(orderList); }
-            set { orderList = value; }
+            get { return new List<string>(this.orderList); }
+            set { this.orderList = value; }
         }
 
         public void AddOrder(int menuItemNumber)

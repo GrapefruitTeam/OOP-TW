@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RestaurantApp
+﻿namespace RestaurantApp
 {
+    using System.Collections.Generic;
+
     public static class ServingArea
     {
-        private const int numberOfTables = 8;
+        private const int NumberOfTables = 8;
 
         private static List<Table> tables;
 
         static ServingArea()
         {
-            tables = new List<Table>(numberOfTables);
-            for (int i = 0; i < numberOfTables; i++)
+            tables = new List<Table>(NumberOfTables);
+            for (int i = 0; i < NumberOfTables; i++)
             {
                 tables.Add(new Table());
             }

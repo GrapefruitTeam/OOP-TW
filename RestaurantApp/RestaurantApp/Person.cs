@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RestaurantApp
+﻿namespace RestaurantApp
 {
     public abstract class Person
     {
@@ -16,7 +10,7 @@ namespace RestaurantApp
         public Person()
         {
         }
-        
+
         public string Name { get; set; }
     }
 }
