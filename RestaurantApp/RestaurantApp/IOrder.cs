@@ -2,6 +2,6 @@
 {
     public interface IOrder
     {
-        void AddMenuItemToOrder(Table table, string item);
+        void AddMenuItemToOrder(Table table, int menuItemNumber);
     }
 }
