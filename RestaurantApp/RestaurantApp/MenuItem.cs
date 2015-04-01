@@ -21,7 +21,7 @@ namespace RestaurantApp
             this.Price = price;
         }
 
-        public MenuItem[] InitializeMenu()
+        public IList<MenuItem> InitializeMenu()
         {
             int count = File.ReadLines(@"..\..\Menu.txt").Count();
             MenuItem[] menuItems = new MenuItem[count];

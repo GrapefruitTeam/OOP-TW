@@ -37,14 +37,16 @@ namespace RestaurantApp
 
             //Testing Waiter
             MenuItem menu = new MenuItem();
-            MenuItem[] menuList = menu.InitializeMenu();
+            IList<MenuItem> menuList = menu.InitializeMenu();
             Waiter waiter = new Waiter("Todor", "56789", "password");
             waiter.AddMenuItemToOrder(ServingArea.Tables[1], menuList[2]);
             waiter.AddMenuItemToOrder(ServingArea.Tables[1], menuList[1]);
             waiter.AddMenuItemToOrder(ServingArea.Tables[1], menuList[0]);
             waiter.RemoveItemFromOrder(ServingArea.Tables[1], menuList[0]);
+            waiter.CalculateCheck(ServingArea.Tables[1]);
             waiter.PrintCheck(ServingArea.Tables[1]);
             waiter.CancelOrder(ServingArea.Tables[1]);
+            waiter.CalculateCheck(ServingArea.Tables[1]);
             waiter.PrintCheck(ServingArea.Tables[1]);
         }
     }

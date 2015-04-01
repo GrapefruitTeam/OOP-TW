@@ -16,24 +16,34 @@
 
         public void PrintCheck(Table table)
         {
-            decimal sum = 0;
             Console.WriteLine("CHECK:");
             foreach (var item in table.Order.OrderList)
             {
                 Console.WriteLine("{0,-20} {1:C}", item.Name, item.Price);
-                sum += (decimal)item.Price;
             }
-
             if (table.Client.ClientType == ClientType.Special)
             {
-                Console.WriteLine("{0,-20} {1:C}\n{2,-20} {3:C}",
-                    "Total price: ", (decimal)sum * 0.9M, 
-                    "Discount: ", (decimal)sum * 0.1M);
+                Console.WriteLine("{0,-20} {1:C}", "Total Amount: ",
+                    table.Check.Amount - table.Check.Amount * Check.discountForSpecials);
+                Console.WriteLine("{0,-20} {1:C}", "Discount: ", 
+                    table.Check.Amount * Check.discountForSpecials);
             }
             else
             {
-                Console.WriteLine("Total price: {0,-20:C}", sum);
+                Console.WriteLine("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount);
             }
+        }
+
+        public void CalculateCheck(Table table)
+        {
+            decimal sum = 0;
+            
+            foreach (var item in table.Order.OrderList)
+            {
+                sum += (decimal)item.Price;
+            }
+
+            table.Check.Amount = sum;
         }
 
         public void RemoveItemFromOrder(Table table, MenuItem item)

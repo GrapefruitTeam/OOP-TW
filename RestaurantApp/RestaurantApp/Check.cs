@@ -2,11 +2,15 @@
 {
     public class Check
     {
-        public Check(Table table, CheckPaymentMethod paymentMethod)
+        public const decimal discountForSpecials = 0.1M; 
+
+        public Check()
         {
-            this.PaymentMethod = paymentMethod;
         }
 
+        public decimal Amount { get; set; }
+
         public CheckPaymentMethod PaymentMethod { get; set; }
+
     }
 }
