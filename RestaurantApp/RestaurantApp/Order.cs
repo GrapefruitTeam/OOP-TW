@@ -17,8 +17,19 @@ namespace RestaurantApp
 
         public ICollection<string> OrderList
         {
-            get { return orderList; }
+            get { return new List<string>(orderList); }
             set { orderList = value; }
+        }
+
+        public void AddOrder(int menuItemNumber)
+        {
+            if (menuItemNumber - 1 < 0 || menuItemNumber - 1 > Menu.MenuList.Count)
+            {
+                throw new ArgumentOutOfRangeException("Menu item doesn't exist");
+            }
+
+            string menuItem = Menu.MenuList.Keys.ElementAt(menuItemNumber - 1);
+            this.orderList.Add(menuItem);
         }
     }
 }
