@@ -2,6 +2,6 @@
 {
     public interface IReserve
     {
-        void ReserveTable(Table table);
+        void ReserveTable(Table table, ClientType type);
     }
 }

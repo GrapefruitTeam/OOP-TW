@@ -24,7 +24,16 @@
                 sum += (decimal)item.Price;
             }
 
-            Console.WriteLine("Total price: {0,16:C}", sum);
+            if (table.Client.ClientType == ClientType.Special)
+            {
+                Console.WriteLine("{0,-20} {1:C}\n{2,-20} {3:C}",
+                    "Total price: ", (decimal)sum * 0.9M, 
+                    "Discount: ", (decimal)sum * 0.1M);
+            }
+            else
+            {
+                Console.WriteLine("Total price: {0,-20:C}", sum);
+            }
         }
 
         public void RemoveItemFromOrder(Table table, MenuItem item)

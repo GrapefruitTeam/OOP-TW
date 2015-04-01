@@ -9,7 +9,7 @@
         {
         }
 
-        public void ReserveTable(Table table)
+        public void ReserveTable(Table table, ClientType type)
         {
             if (table.TableStatus != TableStatus.Free)
             {
@@ -18,6 +18,7 @@
             else
             {
                 table.TableStatus = TableStatus.Reserved;
+                table.Client.ClientType = type;
             }
         }
 
@@ -30,6 +31,7 @@
             else
             {
                 table.TableStatus = TableStatus.Free;
+                table.Client.ClientType = ClientType.Regular;
             }
         }
     }
