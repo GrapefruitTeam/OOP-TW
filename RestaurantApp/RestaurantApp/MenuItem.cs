@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,14 +8,44 @@ using System.IO;
 using System.Globalization;
 
 namespace RestaurantApp
+=======
+﻿namespace RestaurantApp
+>>>>>>> 4f0c87a4376e0f9539f7b2e6b58492bb43f4fe36
 {
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+
     public class MenuItem
     {
         private string name;
         private double price;
 
-        public string Name { get { return this.name; } set { this.name = value; } }
-        public double Price { get { return this.price; } set { this.price = value; } }
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+
+            set
+            {
+                this.name = value;
+            }
+        }
+
+        public double Price
+        {
+            get
+            {
+                return this.price;
+            }
+
+            set
+            {
+                this.price = value;
+            }
+        }
 
         public MenuItem()
         {
@@ -47,6 +78,7 @@ namespace RestaurantApp
                     line = reader.ReadLine();
                 }
             }
+
             return menuItems;
         }
     }

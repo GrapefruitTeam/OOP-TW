@@ -58,12 +58,11 @@
             {
                 Console.WriteLine("{0,-20} {1:C}", item.Name, item.Price);
             }
+
             if (table.Client.ClientType == ClientType.Special)
             {
-                Console.WriteLine("{0,-20} {1:C}", "Total Amount: ",
-                    table.Check.Amount - table.Check.Amount * Check.discountForSpecials);
-                Console.WriteLine("{0,-20} {1:C}", "Discount: ",
-                    table.Check.Amount * Check.discountForSpecials);
+                Console.WriteLine("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount - (table.Check.Amount * Check.DiscountForSpecials));
+                Console.WriteLine("{0,-20} {1:C}", "Discount: ", table.Check.Amount * Check.DiscountForSpecials);
             }
             else
             {

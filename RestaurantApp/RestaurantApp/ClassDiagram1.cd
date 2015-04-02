@@ -1,56 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="RestaurantApp.Busser">
-    <Position X="4.5" Y="5.5" Width="1.5" />
+    <Position X="4.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Busser.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestaurantApp.Check" Collapsed="true">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+  <Class Name="RestaurantApp.Check">
+    <Position X="14.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Check.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Client">
-    <Position X="0.5" Y="3" Width="1.75" />
+    <Position X="0.5" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Client.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Controller">
-    <Position X="2.75" Y="3" Width="1.5" />
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Cook">
-    <Position X="2.5" Y="5.5" Width="1.5" />
+    <Position X="2.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cook.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Employee">
-    <Position X="4.75" Y="3" Width="1.5" />
+    <Position X="4.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Guard">
-    <Position X="0.5" Y="5.5" Width="1.5" />
+    <Position X="0.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Guard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Hostess">
-    <Position X="6.5" Y="8.25" Width="1.75" />
+    <Position X="6.5" Y="8.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Hostess.cs</FileName>
@@ -58,24 +58,17 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RestaurantApp.Manager">
-    <Position X="3.75" Y="8.25" Width="2" />
+    <Position X="3.75" Y="8.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAABAAAAI=</HashCode>
+      <HashCode>AAAAAAAQAEAAAAABAAAAAAAAQAAAAAAAAAAQABAAAAI=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RestaurantApp.Menu" Collapsed="true">
-    <Position X="10.25" Y="0.5" Width="1.5" />
+  <Class Name="RestaurantApp.Order">
+    <Position X="10.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>Menu.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="RestaurantApp.Order" Collapsed="true">
-    <Position X="12" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAQAQAAAAEAA=</HashCode>
       <FileName>Order.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -86,34 +79,104 @@
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestaurantApp.ServingArea" Collapsed="true">
-    <Position X="8.5" Y="1.5" Width="1.5" />
+  <Class Name="RestaurantApp.ServingArea">
+    <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAQQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ServingArea.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestaurantApp.Table" Collapsed="true">
-    <Position X="10.25" Y="1.5" Width="1.5" />
+  <Class Name="RestaurantApp.Table">
+    <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAgAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Table.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RestaurantApp.Waiter">
-    <Position X="9" Y="8.25" Width="2" />
+    <Position X="9" Y="8.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAEAAAAAAAAAAAAAAQAAAAAAAAAAQABAAAAA=</HashCode>
       <FileName>Waiter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RestaurantApp.AuthorizedEmployee">
-    <Position X="6.5" Y="5.5" Width="1.75" />
+    <Position X="6.5" Y="5.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>AuthorizedEmployee.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="RestaurantApp.MenuItem">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAAAAAAAAAQAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestaurantApp.StartRestaurant">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>StartRestaurant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="RestaurantApp.ICancelOrder">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ICancelOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RestaurantApp.ICancelReservation">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICancelReservation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RestaurantApp.ICheckable">
+    <Position X="14.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICheckable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RestaurantApp.IOrder">
+    <Position X="10.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>IOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RestaurantApp.IReserve">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>IReserve.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="RestaurantApp.CheckPaymentMethod">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CheckPaymentMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RestaurantApp.ClientType">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClientType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RestaurantApp.TableStatus">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>TableStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
