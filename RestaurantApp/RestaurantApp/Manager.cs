@@ -1,8 +1,10 @@
 ﻿namespace RestaurantApp
 {
     using System;
+    using System.Collections.Generic;
 
-    public class Manager : AuthorizedEmployee, IOrder, ICancelOrder, IReserve, ICancelReservation, ICheckable
+    public class Manager : AuthorizedEmployee, IOrder, ICancelOrder, IReserve,
+        ICancelReservation, ICheckable, IReport, ICloseTable
     {
         public Manager(string name, string employeeId, string password)
             : base(name, employeeId, password)
@@ -79,6 +81,18 @@
             }
 
             table.Check.Amount = sum;
+        }
+
+        public Dictionary<Table, AuthorizedEmployee> CreateReport()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CloseTable(Table table, CheckPaymentMethod payMethod)
+        {
+            table.Check.PaymentMethod = payMethod;
+            Report.reportsFromTables.Add(table, this);
+            table.TableStatus = TableStatus.Free;
         }
     }
 }
