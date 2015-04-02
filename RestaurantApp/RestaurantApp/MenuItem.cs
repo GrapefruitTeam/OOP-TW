@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Globalization;
-
-namespace RestaurantApp
-=======
 ﻿namespace RestaurantApp
->>>>>>> 4f0c87a4376e0f9539f7b2e6b58492bb43f4fe36
 {
     using System.Collections.Generic;
     using System.IO;
