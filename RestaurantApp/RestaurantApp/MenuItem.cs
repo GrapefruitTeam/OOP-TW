@@ -1,19 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-
-namespace RestaurantApp
+﻿namespace RestaurantApp
 {
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+
     public class MenuItem
     {
         private string name;
         private double price;
 
-        public string Name { get { return this.name; } set { this.name = value; } }
-        public double Price { get { return this.price; } set { this.price = value; } }
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+
+            set
+            {
+                this.name = value;
+            }
+        }
+
+        public double Price
+        {
+            get
+            {
+                return this.price;
+            }
+
+            set
+            {
+                this.price = value;
+            }
+        }
 
         public MenuItem()
         {
@@ -46,6 +66,7 @@ namespace RestaurantApp
                     line = reader.ReadLine();
                 }
             }
+
             return menuItems;
         }
     }

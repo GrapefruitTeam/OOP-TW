@@ -1,14 +1,13 @@
-﻿using System;
-using System.Threading;
-using System.Globalization;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace RestaurantApp
+﻿namespace RestaurantApp
 {
-    class StartRestaurant
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Threading;
+
+    internal class StartRestaurant
     {
-        static void Main()
+        internal static void Main()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
@@ -23,7 +22,7 @@ namespace RestaurantApp
 
             Console.WriteLine();
 
-            //Testing Hostess
+            // Testing Hostess
             Hostess hostess = new Hostess("Penka", "12345", "password");
             hostess.ReserveTable(ServingArea.Tables[2], ClientType.Regular);
             hostess.ReserveTable(ServingArea.Tables[1], ClientType.Special);
@@ -35,7 +34,7 @@ namespace RestaurantApp
             Console.WriteLine(ServingArea.Tables[5].TableStatus);
             Console.WriteLine();
 
-            //Testing Waiter
+            // Testing Waiter
             MenuItem menu = new MenuItem();
             IList<MenuItem> menuList = menu.InitializeMenu();
             Waiter waiter = new Waiter("Todor", "56789", "password");
