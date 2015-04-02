@@ -55,16 +55,12 @@
             waiter2.CalculateCheck(ServingArea.Tables[7]);
             waiter2.PrintCheck(ServingArea.Tables[7]);
             waiter2.CloseTable(ServingArea.Tables[7], CheckPaymentMethod.Cash);
-
             Console.WriteLine();
-            foreach (var item in Report.reportsFromTables)
-            {
-                Console.WriteLine("{0:C} {1} {2} {3}", 
-                    item.Key.Check.Amount,
-                    item.Key.Check.PaymentMethod,
-                    item.Value.Name, 
-                    item.Value.EmployeeId);
-            }
+
+            //Testing Manager
+            Manager manager = new Manager("Ivan", "67456745", "pass");
+            manager.CreateReport();
+            
         }
     }
 }

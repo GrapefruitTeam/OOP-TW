@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
 
     public class Manager : AuthorizedEmployee, IOrder, ICancelOrder, IReserve,
         ICancelReservation, ICheckable, IReport, ICloseTable
@@ -53,7 +54,7 @@
 
         public void PrintCheck(Table table)
         {
-            Console.WriteLine("CHECK:");
+            Console.WriteLine("CHECK table {0}:", ServingArea.Tables.IndexOf(table) + 1);
             foreach (var item in table.Order.OrderList)
             {
                 Console.WriteLine("{0,-20} {1:C}", item.Name, item.Price);
@@ -82,9 +83,26 @@
             table.Check.Amount = sum;
         }
 
-        public Dictionary<Table, AuthorizedEmployee> CreateReport()
+        public void CreateReport()
         {
-            throw new NotImplementedException();
+            var sb = new StringBuilder();
+            sb.AppendLine(string.Format("{0,15}{1,15}{2,15}{3,15}",
+                "Check amount",
+                "Payment method",
+                "Served by",
+                "Employee id"));
+
+            foreach (var item in Report.reportsFromTables)
+            {
+                sb.AppendLine(string.Format("{0,15:C}{1,15}{2,15}{3,15}",
+                    item.Key.Check.Amount,
+                    item.Key.Check.PaymentMethod,
+                    item.Value.Name,
+                    item.Value.EmployeeId));
+                sb.AppendLine();
+            }
+
+            Console.WriteLine(sb.ToString());
         }
 
         public void CloseTable(Table table, CheckPaymentMethod payMethod)
