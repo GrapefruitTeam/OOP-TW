@@ -132,11 +132,43 @@
             table.TableStatus = TableStatus.Free;
         }
 
-
-
         public void CreateEmployeeReport(AuthorizedEmployee employee, string startDate, string endDate)
         {
-            throw new NotImplementedException();
+            DateTime start = Convert.ToDateTime(startDate);
+            DateTime end = Convert.ToDateTime(endDate);
+
+            var sb = new StringBuilder();
+
+            sb.AppendLine(string.Format("Report on employee {0} - {1}",
+                employee.Name, employee.EmployeeId));
+
+            var selectedEmployee = Report.ReportsFromTables
+                .Where(x => x.Value == employee)
+                .Select(x => x);
+
+            var checksSortedByDate = selectedEmployee
+                .Where(x => x.Key.Check.checkDateAndTime >= start &&
+                x.Key.Check.checkDateAndTime <= end)
+                .Select(x => x);
+
+            var checksGroupedByPaymentMethod = checksSortedByDate
+                .GroupBy(x => x.Key.Check.PaymentMethod)
+                .Select(x => x);
+
+            foreach (var group in checksGroupedByPaymentMethod)
+            {
+                sb.Append(string.Format("{0}", group.Key));
+                decimal sum = 0M;
+                foreach (var item in group)
+                {
+                    sum += item.Key.Check.Amount;
+                }
+                sb.Append(string.Format(" {0,-10:C}", sum));
+            }
+            sb.AppendLine();
+            sb.AppendLine(string.Format("Total: {0:C}", selectedEmployee.Sum(x => x.Key.Check.Amount)));
+
+            Console.WriteLine(sb.ToString());
         }
     }
 }

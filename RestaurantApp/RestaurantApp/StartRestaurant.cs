@@ -42,12 +42,16 @@
             waiter.AddMenuItemToOrder(ServingArea.Tables[1], menuList[2]);
             waiter.AddMenuItemToOrder(ServingArea.Tables[1], menuList[1]);
             waiter.AddMenuItemToOrder(ServingArea.Tables[1], menuList[0]);
-            waiter.RemoveItemFromOrder(ServingArea.Tables[2], menuList[0]);
-            waiter.AddMenuItemToOrder(ServingArea.Tables[2], menuList[5]);
+            waiter.RemoveItemFromOrder(ServingArea.Tables[1], menuList[0]);
             waiter.CalculateCheck(ServingArea.Tables[1]);
             waiter.PrintCheck(ServingArea.Tables[1]);
-            waiter.CancelOrder(ServingArea.Tables[1]);
             waiter.CloseTable(ServingArea.Tables[1], CheckPaymentMethod.Cash);
+            //waiter.CancelOrder(ServingArea.Tables[1]);
+            waiter.AddMenuItemToOrder(ServingArea.Tables[3], menuList[5]);
+            waiter.CalculateCheck(ServingArea.Tables[3]);
+            waiter.CloseTable(ServingArea.Tables[3], CheckPaymentMethod.Card);
+            waiter.AddMenuItemToOrder(ServingArea.Tables[2], menuList[11]);
+            waiter.CalculateCheck(ServingArea.Tables[2]);
             waiter.CloseTable(ServingArea.Tables[2], CheckPaymentMethod.Card);
 
             Waiter waiter2 = new Waiter("Alex", "88888", "password8");
@@ -60,6 +64,8 @@
             //Testing Manager
             Manager manager = new Manager("Ivan", "67456745", "pass");
             manager.CreateReport("03/04/15", "09/04/15");
+            Console.WriteLine();
+            manager.CreateEmployeeReport(waiter, "03/04/15", "09/04/15");
             
         }
     }
