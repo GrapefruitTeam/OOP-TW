@@ -65,7 +65,8 @@
         public void CloseTable(Table table, CheckPaymentMethod payMethod)
         {
             table.Check.PaymentMethod = payMethod;
-            Report.reportsFromTables.Add(table, this);
+            table.Check.checkDateAndTime = DateTime.Now;
+            Report.ReportsFromTables.Add(table, this);
             table.TableStatus = TableStatus.Free;
         }
     }

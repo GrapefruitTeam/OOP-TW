@@ -59,7 +59,7 @@
 
             //Testing Manager
             Manager manager = new Manager("Ivan", "67456745", "pass");
-            manager.CreateReport();
+            manager.CreateReport("03/04/15", "09/04/15");
             
         }
     }

@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using System.Linq;
 
     public class Manager : AuthorizedEmployee, IOrder, ICancelOrder, IReserve,
         ICancelReservation, ICheckable, IReport, ICloseTable
@@ -89,24 +90,36 @@
             table.Check.Amount = sum;
         }
 
-        public void CreateReport()
+        public void CreateReport(string startDate, string endDate)
         {
+            DateTime start = Convert.ToDateTime(startDate);
+            DateTime end = Convert.ToDateTime(endDate);
+
             var sb = new StringBuilder();
-            sb.AppendLine(string.Format("{0,15}{1,15}{2,15}{3,15}",
+            sb.AppendLine(string.Format("{0,20}{1,15}{2,15}{3,15}{4,15}",
+                "Date",
                 "Check amount",
                 "Payment method",
                 "Served by",
                 "Employee id"));
 
-            foreach (var item in Report.reportsFromTables)
+            var sumOfChecks = 0M;
+            foreach (var item in Report.ReportsFromTables)
             {
-                sb.AppendLine(string.Format("{0,15:C}{1,15}{2,15}{3,15}",
+                if (item.Key.Check.checkDateAndTime >= start &&
+                    item.Key.Check.checkDateAndTime <= end)
+                {
+                    sb.AppendLine(string.Format("{0,20}{1,15:C}{2,15}{3,15}{4,15}",
+                        item.Key.Check.checkDateAndTime.ToString(format: "yyyy/MM/dd HH:mm"),
                     item.Key.Check.Amount,
                     item.Key.Check.PaymentMethod,
                     item.Value.Name,
                     item.Value.EmployeeId));
-                sb.AppendLine();
+                    sb.AppendLine();
+                    sumOfChecks += item.Key.Check.Amount;
+                }
             }
+            sb.Append(string.Format("Total: {0:C}", sumOfChecks));
 
             Console.WriteLine(sb.ToString());
         }
@@ -114,8 +127,16 @@
         public void CloseTable(Table table, CheckPaymentMethod payMethod)
         {
             table.Check.PaymentMethod = payMethod;
-            Report.reportsFromTables.Add(table, this);
+            table.Check.checkDateAndTime = DateTime.Now;
+            Report.ReportsFromTables.Add(table, this);
             table.TableStatus = TableStatus.Free;
+        }
+
+
+
+        public void CreateEmployeeReport(AuthorizedEmployee employee, string startDate, string endDate)
+        {
+            throw new NotImplementedException();
         }
     }
 }
