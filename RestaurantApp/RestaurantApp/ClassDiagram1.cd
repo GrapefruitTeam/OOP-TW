@@ -10,7 +10,7 @@
   <Class Name="RestaurantApp.Check">
     <Position X="14.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAACAAAAIQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Check.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -60,7 +60,7 @@
   <Class Name="RestaurantApp.Manager">
     <Position X="3.75" Y="8.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAEAAAAABAAAAAAAAQAAAAAAAAAAQABAAAAI=</HashCode>
+      <HashCode>AAAAAAAQAEAEAAABAAAAABAAQAAAAgAAAAAQABAAAAI=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -96,7 +96,7 @@
   <Class Name="RestaurantApp.Waiter">
     <Position X="9" Y="8.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAEAAAAAAAAAAAAAAQAAAAAAAAAAQABAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAEAAAAAAAAAAAAAAQAAAAgAAAAAQABAAAAA=</HashCode>
       <FileName>Waiter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -120,6 +120,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>StartRestaurant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestaurantApp.Report">
+    <Position X="14.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Report.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="RestaurantApp.ICancelOrder">
@@ -157,6 +164,13 @@
       <FileName>IReserve.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="RestaurantApp.ICloseTable">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICloseTable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="RestaurantApp.CheckPaymentMethod">
     <Position X="14.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
@@ -172,7 +186,7 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="RestaurantApp.TableStatus">
-    <Position X="7" Y="3" Width="1.5" />
+    <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>TableStatus.cs</FileName>

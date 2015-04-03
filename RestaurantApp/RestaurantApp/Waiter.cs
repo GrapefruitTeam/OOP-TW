@@ -20,7 +20,7 @@
             var sb = new StringBuilder();
 
             sb.AppendLine(string.Format("CHECK table {0}:", ServingArea.Tables.IndexOf(table) + 1));
-            
+
             foreach (var item in table.Order.OrderList)
             {
                 sb.AppendLine(string.Format("{0,-20} {1:C}", item.Name, item.Price));
@@ -28,15 +28,20 @@
 
             if (table.Client.ClientType == ClientType.Special)
             {
-                sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ",
+                sb.AppendLine(string.Format(
+                    "{0,-20} {1:C}",
+                    "Total Amount: ",
                     table.Check.Amount - (table.Check.Amount * Check.DiscountForSpecials)));
-                sb.AppendLine(string.Format("{0,-20} {1:C}", "Discount: ",
+                sb.AppendLine(string.Format(
+                    "{0,-20} {1:C}",
+                    "Discount: ",
                     table.Check.Amount * Check.DiscountForSpecials));
             }
             else
             {
                 sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount));
             }
+
             Console.WriteLine(sb.ToString());
         }
 
@@ -65,7 +70,7 @@
         public void CloseTable(Table table, CheckPaymentMethod payMethod)
         {
             table.Check.PaymentMethod = payMethod;
-            table.Check.checkDateAndTime = DateTime.Now;
+            table.Check.CheckDateAndTime = DateTime.Now;
             Report.ReportsFromTables.Add(table, this);
             table.TableStatus = TableStatus.Free;
         }

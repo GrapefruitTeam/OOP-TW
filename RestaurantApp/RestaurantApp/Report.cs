@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RestaurantApp
+﻿namespace RestaurantApp
 {
+    using System.Collections.Generic;
+
     public static class Report
     {
         private static Dictionary<Table, AuthorizedEmployee> reportsFromTables = new Dictionary<Table, AuthorizedEmployee>();

@@ -34,10 +34,10 @@
             Console.WriteLine(ServingArea.Tables[5].TableStatus);
             Console.WriteLine();
 
-            //Testing Waiters
+            // Testing Waiters
             MenuItem menu = new MenuItem();
             IList<MenuItem> menuList = menu.InitializeMenu();
-            
+
             Waiter waiter = new Waiter("Todor", "56789", "password");
             waiter.AddMenuItemToOrder(ServingArea.Tables[1], menuList[2]);
             waiter.AddMenuItemToOrder(ServingArea.Tables[1], menuList[1]);
@@ -46,7 +46,8 @@
             waiter.CalculateCheck(ServingArea.Tables[1]);
             waiter.PrintCheck(ServingArea.Tables[1]);
             waiter.CloseTable(ServingArea.Tables[1], CheckPaymentMethod.Cash);
-            //waiter.CancelOrder(ServingArea.Tables[1]);
+
+            // waiter.CancelOrder(ServingArea.Tables[1]);
             waiter.AddMenuItemToOrder(ServingArea.Tables[3], menuList[5]);
             waiter.CalculateCheck(ServingArea.Tables[3]);
             waiter.CloseTable(ServingArea.Tables[3], CheckPaymentMethod.Card);
@@ -61,12 +62,11 @@
             waiter2.CloseTable(ServingArea.Tables[7], CheckPaymentMethod.Cash);
             Console.WriteLine();
 
-            //Testing Manager
+            // Testing Manager
             Manager manager = new Manager("Ivan", "67456745", "pass");
             manager.CreateReport("03/04/15", "09/04/15");
             Console.WriteLine();
             manager.CreateEmployeeReport(waiter, "03/04/15", "09/04/15");
-            
         }
     }
 }

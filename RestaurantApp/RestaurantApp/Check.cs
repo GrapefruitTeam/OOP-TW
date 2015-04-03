@@ -14,6 +14,6 @@
 
         public CheckPaymentMethod PaymentMethod { get; set; }
 
-        public DateTime checkDateAndTime { get; set; }
+        public DateTime CheckDateAndTime { get; set; }
     }
 }

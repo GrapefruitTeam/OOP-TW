@@ -1,9 +1,8 @@
 ﻿namespace RestaurantApp
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
     using System.Linq;
+    using System.Text;
 
     public class Manager : AuthorizedEmployee, IOrder, ICancelOrder, IReserve,
         ICancelReservation, ICheckable, IReport, ICloseTable
@@ -66,15 +65,20 @@
 
             if (table.Client.ClientType == ClientType.Special)
             {
-                sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ",
+                sb.AppendLine(string.Format(
+                    "{0,-20} {1:C}",
+                    "Total Amount: ",
                     table.Check.Amount - (table.Check.Amount * Check.DiscountForSpecials)));
-                sb.AppendLine(string.Format("{0,-20} {1:C}", "Discount: ",
+                sb.AppendLine(string.Format(
+                    "{0,-20} {1:C}",
+                    "Discount: ",
                     table.Check.Amount * Check.DiscountForSpecials));
             }
             else
             {
                 sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount));
             }
+
             Console.WriteLine(sb.ToString());
         }
 
@@ -96,7 +100,9 @@
             DateTime end = Convert.ToDateTime(endDate);
 
             var sb = new StringBuilder();
-            sb.AppendLine(string.Format("{0,20}{1,15}{2,15}{3,15}{4,15}",
+
+            sb.AppendLine(string.Format(
+                "{0,20}{1,15}{2,15}{3,15}{4,15}",
                 "Date",
                 "Check amount",
                 "Payment method",
@@ -106,19 +112,21 @@
             var sumOfChecks = 0M;
             foreach (var item in Report.ReportsFromTables)
             {
-                if (item.Key.Check.checkDateAndTime >= start &&
-                    item.Key.Check.checkDateAndTime <= end)
+                if (item.Key.Check.CheckDateAndTime >= start &&
+                    item.Key.Check.CheckDateAndTime <= end)
                 {
-                    sb.AppendLine(string.Format("{0,20}{1,15:C}{2,15}{3,15}{4,15}",
-                        item.Key.Check.checkDateAndTime.ToString(format: "yyyy/MM/dd HH:mm"),
-                    item.Key.Check.Amount,
-                    item.Key.Check.PaymentMethod,
-                    item.Value.Name,
-                    item.Value.EmployeeId));
+                    sb.AppendLine(string.Format(
+                        "{0,20}{1,15:C}{2,15}{3,15}{4,15}",
+                        item.Key.Check.CheckDateAndTime.ToString(format: "yyyy/MM/dd HH:mm"),
+                        item.Key.Check.Amount,
+                        item.Key.Check.PaymentMethod,
+                        item.Value.Name,
+                        item.Value.EmployeeId));
                     sb.AppendLine();
                     sumOfChecks += item.Key.Check.Amount;
                 }
             }
+
             sb.Append(string.Format("Total: {0:C}", sumOfChecks));
 
             Console.WriteLine(sb.ToString());
@@ -127,7 +135,7 @@
         public void CloseTable(Table table, CheckPaymentMethod payMethod)
         {
             table.Check.PaymentMethod = payMethod;
-            table.Check.checkDateAndTime = DateTime.Now;
+            table.Check.CheckDateAndTime = DateTime.Now;
             Report.ReportsFromTables.Add(table, this);
             table.TableStatus = TableStatus.Free;
         }
@@ -139,16 +147,15 @@
 
             var sb = new StringBuilder();
 
-            sb.AppendLine(string.Format("Report on employee {0} - {1}",
-                employee.Name, employee.EmployeeId));
+            sb.AppendLine(string.Format("Report on employee {0} - {1}", employee.Name, employee.EmployeeId));
 
             var selectedEmployee = Report.ReportsFromTables
                 .Where(x => x.Value == employee)
                 .Select(x => x);
 
             var checksSortedByDate = selectedEmployee
-                .Where(x => x.Key.Check.checkDateAndTime >= start &&
-                x.Key.Check.checkDateAndTime <= end)
+                .Where(x => x.Key.Check.CheckDateAndTime >= start &&
+                x.Key.Check.CheckDateAndTime <= end)
                 .Select(x => x);
 
             var checksGroupedByPaymentMethod = checksSortedByDate
@@ -163,8 +170,10 @@
                 {
                     sum += item.Key.Check.Amount;
                 }
+
                 sb.Append(string.Format(" {0,-10:C}", sum));
             }
+
             sb.AppendLine();
             sb.AppendLine(string.Format("Total: {0:C}", selectedEmployee.Sum(x => x.Key.Check.Amount)));
 
