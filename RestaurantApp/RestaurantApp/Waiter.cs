@@ -1,6 +1,7 @@
 ﻿namespace RestaurantApp
 {
     using System;
+    using System.Text;
 
     public class Waiter : AuthorizedEmployee, IOrder, ICancelOrder, ICheckable, ICloseTable
     {
@@ -16,21 +17,27 @@
 
         public void PrintCheck(Table table)
         {
-            Console.WriteLine("CHECK table {0}:", ServingArea.Tables.IndexOf(table) + 1);
+            var sb = new StringBuilder();
+
+            sb.AppendLine(string.Format("CHECK table {0}:", ServingArea.Tables.IndexOf(table) + 1));
+            
             foreach (var item in table.Order.OrderList)
             {
-                Console.WriteLine("{0,-20} {1:C}", item.Name, item.Price);
+                sb.AppendLine(string.Format("{0,-20} {1:C}", item.Name, item.Price));
             }
 
             if (table.Client.ClientType == ClientType.Special)
             {
-                Console.WriteLine("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount - (table.Check.Amount * Check.DiscountForSpecials));
-                Console.WriteLine("{0,-20} {1:C}", "Discount: ", table.Check.Amount * Check.DiscountForSpecials);
+                sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ",
+                    table.Check.Amount - (table.Check.Amount * Check.DiscountForSpecials)));
+                sb.AppendLine(string.Format("{0,-20} {1:C}", "Discount: ",
+                    table.Check.Amount * Check.DiscountForSpecials));
             }
             else
             {
-                Console.WriteLine("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount);
+                sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount));
             }
+            Console.WriteLine(sb.ToString());
         }
 
         public void CalculateCheck(Table table)
