@@ -1,5 +1,6 @@
 ﻿namespace RestaurantApp
 {
+    using RestaurantApp.Persons.Personnel;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
@@ -7,9 +8,13 @@
 
     internal class StartRestaurant
     {
+        public static DishesToCook dishesToCook = new DishesToCook();
+
         internal static void Main()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            
+            Kitchen kitchen = new Kitchen();
 
             // Testing ServingArea.cs
             ServingArea.Tables[2].TableStatus = TableStatus.Occupied;
@@ -67,6 +72,15 @@
             manager.CreateReport("03/04/15", "09/04/15");
             Console.WriteLine();
             manager.CreateEmployeeReport(waiter, "03/04/15", "09/04/15");
+
+            // Testing Kitchen
+            Console.WriteLine("Orders received by Kitchen:");
+            foreach (var item in dishesToCook)
+	        {
+                Console.WriteLine(item.ToString());
+	        }
+            
+
         }
     }
 }
