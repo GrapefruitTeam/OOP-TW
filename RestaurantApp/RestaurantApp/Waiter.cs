@@ -51,7 +51,7 @@
 
             foreach (var item in table.Order.OrderList)
             {
-                sum += (decimal)item.Price;
+                sum += item.Price;
             }
 
             table.Check.Amount = sum;

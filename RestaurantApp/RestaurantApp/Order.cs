@@ -1,5 +1,6 @@
 ﻿namespace RestaurantApp
 {
+    using System;
     using System.Collections.Generic;
 
     public class Order
@@ -24,6 +25,10 @@
 
         public void RemoveItem(MenuItem item)
         {
+            if (!this.orderList.Contains(item))
+            {
+                throw new ArgumentException("Item is not in the order list!");
+            }
             this.orderList.Remove(item);
         }
 

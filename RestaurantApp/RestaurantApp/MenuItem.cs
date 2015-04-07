@@ -7,7 +7,7 @@
     public class MenuItem
     {
         private string name;
-        private double price;
+        private decimal price;
 
         public string Name
         {
@@ -22,7 +22,7 @@
             }
         }
 
-        public double Price
+        public decimal Price
         {
             get
             {
@@ -60,7 +60,7 @@
                 {
                     string[] data = line.Split(';');
                     menuItems[index].Name = data[0];
-                    menuItems[index].Price = double.Parse(data[1]);
+                    menuItems[index].Price = decimal.Parse(data[1]);
 
                     index++;
                     line = reader.ReadLine();
