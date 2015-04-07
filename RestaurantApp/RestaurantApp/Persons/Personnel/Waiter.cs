@@ -26,20 +26,11 @@
                 sb.AppendLine(string.Format("{0,-20} {1:C}", item.Name, item.Price));
             }
 
+            sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount));
+
             if (table.Client.ClientType == ClientType.Special)
             {
-                sb.AppendLine(string.Format(
-                    "{0,-20} {1:C}",
-                    "Total Amount: ",
-                    table.Check.Amount - (table.Check.Amount * Check.DiscountForSpecials)));
-                sb.AppendLine(string.Format(
-                    "{0,-20} {1:C}",
-                    "Discount: ",
-                    table.Check.Amount * Check.DiscountForSpecials));
-            }
-            else
-            {
-                sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount));
+                sb.AppendLine(string.Format("{0,-20} {1:C}", "Discount: ", table.Check.Discount));
             }
 
             Console.WriteLine(sb.ToString());
@@ -47,14 +38,16 @@
 
         public void CalculateCheck(Table table)
         {
-            decimal sum = 0;
-
             foreach (var item in table.Order.OrderList)
             {
-                sum += item.Price;
+                table.Check.Amount += item.Price;
             }
 
-            table.Check.Amount = sum;
+            if (table.Client.ClientType == ClientType.Special)
+            {
+                table.Check.Discount = table.Check.Amount * Check.DiscountForSpecials;
+                table.Check.Amount -= table.Check.Discount;
+            }
         }
 
         public void RemoveItemFromOrder(Table table, MenuItem item)
