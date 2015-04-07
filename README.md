@@ -1,18 +1,11 @@
-Restaurant Application may be of interest to people holding some restaurant businesses.
+# RestaurantApp
+Restaurant Application may be of use to people holding some restaurant businesses.
 
-The tasks Application solves are:
-
-• Handling of clients orders:
-
-Transporting orders from clients to kitchen is automated.
-
-When client asks for a check Application creates it using all the data it has about a client.
-
-• Keeping track of restaurant occupation (number of occupied and free tables):
-
-Changing statuses of tables in a serving area (free, occupied, reserved) and giving the
-information about these statuses to authorized employees of a restaurant.
-
-• Keeping records of cash and credit card payments from clients:
-
-All orders are kept in a system and are used to form a report.
+The application has several functionalities:
+- Handling client orders
+- Transporting orders from clients to kitchen automatically
+- Calculating the check intelligently depending on the type of client
+- Keeping track of restaurant occupation (number of occupied and free tables)
+- Ability to change table status in serving area - free, occupied, reserved (only authorized employees of the restaurant can access this information)
+- Keeping track of cash and credit card payments from clients
+- Creating reports for the whole restaurant or for a specific employee
