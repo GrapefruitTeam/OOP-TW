@@ -12,6 +12,8 @@
 
         public decimal Amount { get; set; }
 
+        public decimal Discount { get; set; }
+
         public CheckPaymentMethod PaymentMethod { get; set; }
 
         public DateTime CheckDateAndTime { get; set; }
