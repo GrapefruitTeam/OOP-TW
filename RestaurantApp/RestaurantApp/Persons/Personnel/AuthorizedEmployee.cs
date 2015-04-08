@@ -8,6 +8,6 @@
             this.Password = password;
         }
 
-        public string Password { get; set; }
+        public string Password { get; protected set; }
     }
 }
