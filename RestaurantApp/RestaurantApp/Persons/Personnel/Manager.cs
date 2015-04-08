@@ -67,11 +67,7 @@
             }
 
             sb.AppendLine(string.Format("{0,-20} {1:C}", "Total Amount: ", table.Check.Amount));
-
-            //if (table.Client.ClientType == ClientType.Special)
-            //{
-            //    sb.AppendLine(string.Format("{0,-20} {1:C}", "Discount: ", table.Check.Discount));
-            //}
+            sb.AppendLine(string.Format("{0,-20} {1:C}", "Discount: ", table.Check.Discount));
 
             Console.WriteLine(sb.ToString());
         }
@@ -83,11 +79,8 @@
                 table.Check.Amount += item.Price;
             }
 
-            //if (table.Client.ClientType == ClientType.Special)
-            //{
-                table.Check.Discount = table.Check.Amount * Check.DiscountForSpecials;
-                table.Check.Amount -= table.Check.Discount;
-            //}
+            table.Check.Discount = table.Check.Amount * Check.DiscountForSpecials;
+            table.Check.Amount -= table.Check.Discount;
         }
 
         public void CreateReport(string startDate, string endDate)
