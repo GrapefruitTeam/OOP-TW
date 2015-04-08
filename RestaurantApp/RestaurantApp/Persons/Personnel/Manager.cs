@@ -40,6 +40,7 @@
         public void AddMenuItemToOrder(Table table, MenuItem item)
         {
             table.Order.AddItem(item);
+            StartRestaurant.dishesToCook.AddMenuItem(item);
         }
 
         public void RemoveItemFromOrder(Table table, MenuItem item)
