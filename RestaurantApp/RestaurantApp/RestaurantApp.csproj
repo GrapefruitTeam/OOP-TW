@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine\GlobalErrorMessages.cs" />
+    <Compile Include="Engine\MenuStruct.cs" />
+    <Compile Include="Engine\Validator.cs" />
     <Compile Include="Kitchen.cs" />
     <Compile Include="Persons\Personnel\AuthorizedEmployee.cs" />
     <Compile Include="Persons\Personnel\Busser.cs" />
@@ -48,7 +51,7 @@
     <Compile Include="Engine\CheckPaymentMethod.cs" />
     <Compile Include="Persons\Other\Client.cs" />
     <Compile Include="Engine\ClientType.cs" />
-    <Compile Include="Persons\Personnel\DishesToCook.cs" />
+    <Compile Include="Engine\DishesToCook.cs" />
     <Compile Include="Persons\Personnel\Controller.cs" />
     <Compile Include="Persons\Personnel\Cook.cs" />
     <Compile Include="Persons\Personnel\Employee.cs" />
