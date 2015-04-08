@@ -1,9 +1,10 @@
 ﻿namespace RestaurantApp.Engine
 {
     using System;
-    class RestaurantException : ApplicationException
+
+    internal class RestaurantException : ApplicationException
     {
-        public RestaurantException(string message) 
+        public RestaurantException(string message)
             : base(message)
         {
         }

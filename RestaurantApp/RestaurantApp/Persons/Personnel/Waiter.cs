@@ -18,7 +18,7 @@
 
         public void AssignedABusser(Busser busser)
         {
-            //this is used in the CleanTable() in this class
+            // this is used in the CleanTable() in this class
             this.WaiterBusser = busser;
         }
 
@@ -78,12 +78,12 @@
             table.Check.CheckDateAndTime = DateTime.Now;
             Report.ReportsFromTables.Add(table, this);
 
-            CleanTable(table);
+            this.CleanTable(table);
         }
 
         private void CleanTable(Table table)
         {
-            //if the waiter doesnt have a Busser assigned to him, he will clean the table and set its status to free
+            // if the waiter doesnt have a Busser assigned to him, he will clean the table and set its status to free
             if (this.WaiterBusser == null)
             {
                 table.TableStatus = TableStatus.Free;

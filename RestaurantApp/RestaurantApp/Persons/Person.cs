@@ -6,9 +6,9 @@
 
     public abstract class Person
     {
-        //readonly or const
-        protected readonly int minNameLength = 2;
-        protected readonly int maxNameLength = 12;
+        // readonly or const
+        protected readonly int MinNameLength = 2;
+        protected readonly int MaxNameLength = 12;
 
         private string name;
 
@@ -21,21 +21,24 @@
         {
         }
 
-        public string Name 
-        { 
-            get 
+        public string Name
+        {
+            get
             {
                 return this.name;
             }
+
             set
             {
-                Validator.CheckIfStringIsNullOrEmpty(value, 
-                    string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty,"person`s name"));
+                Validator.CheckIfStringIsNullOrEmpty(
+                    value,
+                    string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty, "person`s name"));
 
-                Validator.CheckIfStringLengthIsValid(value,
-                    maxNameLength,
-                    minNameLength,
-                    string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty,"person`s name", minNameLength, maxNameLength));
+                Validator.CheckIfStringLengthIsValid(
+                    value,
+                    this.MaxNameLength,
+                    this.MinNameLength,
+                    string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty, "person`s name", this.MinNameLength, this.MaxNameLength));
 
                 this.name = value;
             }

@@ -10,18 +10,18 @@
     {
         public event MyDelegate MyEvent;
 
-        protected virtual void OnChanged(MenuItem item)
-        {
-            if (MyEvent != null)
-            {
-                MyEvent(item);
-            }
-        }
-
         public void AddMenuItem(MenuItem item)
         {
-            Add(item);
-            OnChanged(item);
+            this.Add(item);
+            this.OnChanged(item);
+        }
+
+        protected virtual void OnChanged(MenuItem item)
+        {
+            if (this.MyEvent != null)
+            {
+                this.MyEvent(item);
+            }
         }
     }
 }

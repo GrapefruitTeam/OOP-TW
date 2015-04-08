@@ -11,6 +11,12 @@
         private string name;
         private decimal price;
 
+        public MenuItem()
+        {
+            this.Name = this.name;
+            this.Price = this.price;
+        }
+
         public string Name
         {
             get
@@ -35,12 +41,6 @@
             {
                 this.price = value;
             }
-        }
-
-        public MenuItem()
-        {
-            this.Name = name;
-            this.Price = price;
         }
 
         public IList<MenuItem> InitializeMenu()

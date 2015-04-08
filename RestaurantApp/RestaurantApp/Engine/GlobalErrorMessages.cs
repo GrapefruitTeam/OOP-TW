@@ -9,4 +9,3 @@
         public const string InvalidStringLength = "{0} must be between {1} and {2} symbols long!";
     }
 }
-

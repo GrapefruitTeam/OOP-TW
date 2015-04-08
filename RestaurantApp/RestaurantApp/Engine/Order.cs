@@ -29,6 +29,7 @@
             {
                 throw new ArgumentException("Item is not in the order list!");
             }
+
             this.orderList.Remove(item);
         }
 

@@ -15,7 +15,7 @@
         internal static void Main()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            
+
             Kitchen kitchen = new Kitchen();
 
             // Testing ServingArea.cs
@@ -75,13 +75,12 @@
             Console.WriteLine();
             manager.CreateEmployeeReport(waiter, "03/04/15", "09/04/15");
 
-
             // Testing Kitchen
             Console.WriteLine("Orders received by Kitchen:");
             foreach (var item in DishesToCook)
-	        {
+            {
                 Console.WriteLine(item.ToString());
-	        }
+            }
         }
     }
 }
