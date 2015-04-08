@@ -1,4 +1,4 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Persons.Personnel
 {
     using System;
     public class Cook : Employee

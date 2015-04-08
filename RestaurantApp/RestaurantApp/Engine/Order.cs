@@ -1,4 +1,4 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Engine
 {
     using System;
     using System.Collections.Generic;

@@ -1,5 +1,7 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Engine
 {
+    using RestaurantApp.Persons.Other;
+
     public class Table
     {
         public Table()

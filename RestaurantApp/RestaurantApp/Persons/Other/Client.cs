@@ -1,5 +1,7 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Persons.Other
 {
+    using RestaurantApp.Engine;
+
     public class Client : Person
     {
         public Client()

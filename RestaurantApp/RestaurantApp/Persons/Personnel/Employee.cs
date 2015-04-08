@@ -1,5 +1,7 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Persons.Personnel
 {
+    using RestaurantApp.Engine;
+
     public abstract class Employee : Person
     {
         private string id;

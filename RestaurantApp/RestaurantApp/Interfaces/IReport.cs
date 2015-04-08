@@ -1,6 +1,6 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Interfaces
 {
-    using System;
+    using RestaurantApp.Persons.Personnel;
 
     public interface IReport
     {

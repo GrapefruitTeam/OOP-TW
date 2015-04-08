@@ -1,4 +1,4 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Engine
 {
     using System.Collections.Generic;
     using System.IO;
@@ -6,6 +6,8 @@
 
     public class MenuItem
     {
+        private const string menuFilePath = @"..\..\Engine\Menu.txt";
+
         private string name;
         private decimal price;
 
@@ -43,7 +45,7 @@
 
         public IList<MenuItem> InitializeMenu()
         {
-            int count = File.ReadLines(@"..\..\Menu.txt").Count();
+            int count = File.ReadLines(menuFilePath).Count();
             MenuItem[] menuItems = new MenuItem[count];
 
             for (var i = 0; i < menuItems.Length; i++)
@@ -52,7 +54,7 @@
             }
 
             int index = 0;
-            using (StreamReader reader = new StreamReader(@"..\..\Menu.txt"))
+            using (StreamReader reader = new StreamReader(menuFilePath))
             {
                 string line = reader.ReadLine();
 
