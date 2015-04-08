@@ -9,7 +9,7 @@
     {
         public Kitchen()
         {
-            StartRestaurant.dishesToCook.MyEvent += new MyDelegate(PrintIncomingOrder);
+            StartRestaurant.DishesToCook.MyEvent += new MyDelegate(PrintIncomingOrder);
         }
 
         public void PrintIncomingOrder(MenuItem item)

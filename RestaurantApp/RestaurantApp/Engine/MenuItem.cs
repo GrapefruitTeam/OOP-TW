@@ -6,7 +6,7 @@
 
     public class MenuItem
     {
-        private const string menuFilePath = @"..\..\Engine\Menu.txt";
+        private const string MenuFilePath = @"..\..\Engine\Menu.txt";
 
         private string name;
         private decimal price;
@@ -45,7 +45,7 @@
 
         public IList<MenuItem> InitializeMenu()
         {
-            int count = File.ReadLines(menuFilePath).Count();
+            int count = File.ReadLines(MenuFilePath).Count();
             MenuItem[] menuItems = new MenuItem[count];
 
             for (var i = 0; i < menuItems.Length; i++)
@@ -54,7 +54,7 @@
             }
 
             int index = 0;
-            using (StreamReader reader = new StreamReader(menuFilePath))
+            using (StreamReader reader = new StreamReader(MenuFilePath))
             {
                 string line = reader.ReadLine();
 

@@ -10,7 +10,7 @@
 
     internal class StartRestaurant
     {
-        public static DishesToCook dishesToCook = new DishesToCook();
+        public static DishesToCook DishesToCook = new DishesToCook();
 
         internal static void Main()
         {
@@ -83,7 +83,7 @@
 
             // Testing Kitchen
             Console.WriteLine("Orders received by Kitchen:");
-            foreach (var item in dishesToCook)
+            foreach (var item in DishesToCook)
 	        {
                 Console.WriteLine(item.ToString());
 	        }

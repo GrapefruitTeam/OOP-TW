@@ -2,13 +2,12 @@
 namespace RestaurantApp.Engine
 { 
     using System;
-    using System.Text;
-
+    
     public struct MenuStruct
     {
-        private const int minLength = 4;
+        private const int MinLength = 4;
         //must be a very fancy dish name to have 80 chars in it
-        private const int maxLength = 80;
+        private const int MaxLength = 80;
 
         private string firstMeal;
         private string secondMeal;

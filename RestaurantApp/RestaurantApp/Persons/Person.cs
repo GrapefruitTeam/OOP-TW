@@ -36,6 +36,8 @@
                     maxNameLength,
                     minNameLength,
                     string.Format(GlobalErrorMessages.StringCannotBeNullOrEmpty,"person`s name", minNameLength, maxNameLength));
+
+                this.name = value;
             }
         }
     }
