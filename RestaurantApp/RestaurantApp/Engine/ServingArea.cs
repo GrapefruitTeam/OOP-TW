@@ -6,7 +6,7 @@
     {
         private const int NumberOfTables = 8;
 
-        private static List<Table> tables;
+        private static IList<Table> tables;
 
         static ServingArea()
         {
