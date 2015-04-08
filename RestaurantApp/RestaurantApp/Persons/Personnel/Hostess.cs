@@ -1,6 +1,9 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Persons.Personnel
 {
     using System;
+
+    using RestaurantApp.Interfaces;
+    using RestaurantApp.Engine;
 
     public class Hostess : AuthorizedEmployee, IReserve, ICancelReservation
     {

@@ -2,6 +2,8 @@
 {
     using System;
 
+    using RestaurantApp.Engine;
+
     public abstract class Person
     {
         //readonly or const

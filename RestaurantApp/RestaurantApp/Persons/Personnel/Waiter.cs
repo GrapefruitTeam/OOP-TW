@@ -3,6 +3,10 @@
     using System;
     using System.Text;
 
+    using RestaurantApp.Engine;
+    using RestaurantApp.Interfaces;
+    using RestaurantApp.Persons.Personnel;
+
     public class Waiter : AuthorizedEmployee, IOrder, ICancelOrder, ICheckable, ICloseTable
     {
         public Waiter(string name, string employeeId, string password)

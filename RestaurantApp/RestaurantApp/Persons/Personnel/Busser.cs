@@ -1,6 +1,9 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Persons.Personnel
 {
     using System;
+
+    using RestaurantApp.Engine;
+
     public class Busser : Employee
     {
         public Busser(string name, string employeeId)

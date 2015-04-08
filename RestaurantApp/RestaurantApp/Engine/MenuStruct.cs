@@ -1,5 +1,5 @@
 ﻿//reference https://msdn.microsoft.com/en-us/library/aa288471%28v=vs.71%29.aspx or Structs Tutorial from microsoft
-namespace RestaurantApp
+namespace RestaurantApp.Engine
 { 
     using System;
     using System.Text;

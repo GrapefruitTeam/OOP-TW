@@ -1,6 +1,8 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Engine
 {
     using System.Collections.Generic;
+
+    using RestaurantApp.Persons.Personnel;
 
     public static class Report
     {

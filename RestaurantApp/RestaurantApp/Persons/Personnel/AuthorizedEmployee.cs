@@ -1,4 +1,4 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Persons.Personnel
 {
     public abstract class AuthorizedEmployee : Employee
     {

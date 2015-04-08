@@ -1,8 +1,11 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Persons.Personnel
 {
     using System;
     using System.Linq;
     using System.Text;
+
+    using RestaurantApp.Interfaces;
+    using RestaurantApp.Engine;
 
     public class Manager : AuthorizedEmployee, IOrder, ICancelOrder, IReserve,
         ICancelReservation, ICheckable, IReport, ICloseTable

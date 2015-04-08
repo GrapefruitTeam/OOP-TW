@@ -1,4 +1,4 @@
-﻿namespace RestaurantApp
+﻿namespace RestaurantApp.Engine
 {
     using System;
     class RestaurantException : ApplicationException
